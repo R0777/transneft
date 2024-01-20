@@ -1,0 +1,66 @@
+@import "/styles/variables.scss";
+
+.footer {
+  max-height: 1900px;
+
+  @media (max-width: 768px) {
+    max-height: 700px;
+  }
+}
+
+.footerOuter {
+  background-color: white;
+
+  & .upperFooter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+
+    }
+
+    & .wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1199px) {
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;
+      height: auto;
+      & .logoAndSocial {
+        max-width: 100%;
+        order: 1;
+        margin: auto;
+        justify-content: flex-start;
+      }
+
+      & p.copyrightText {
+        order: 3;
+        max-width: unset;
+      }
+    }
+    @media (max-width: 767px) {
+      & .logoAndSocial {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+.rightSide {
+  color: #005a9c;
+  display: flex;
+  margin: auto 0;
+}
+
+.footerContainer {
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+  padding: 40px 15px;
+}

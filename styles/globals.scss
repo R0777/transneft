@@ -1,0 +1,144 @@
+@import "/styles/variables.scss";
+
+@font-face {
+  font-family: "Franklin";
+  font-style: normal;
+  font-weight: 100;
+  src: url("/fonts/Franklin/Franklin-Gothic.ttf") format("truetype");
+  font-display: swap;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Franklin", sans-serif;
+  scroll-behavior: smooth;
+  white-space: pre-wrap;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+h1 {
+  font-size: 72px;
+  text-align: center;
+}
+
+h2 {
+  position: relative;
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 500;
+  padding-top: 50px;
+
+  @media (max-width: $tablet-m) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+p {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 300;
+
+  @media (max-width: $tablet-m) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  padding: 30px;
+}
+
+section {
+  width: 100%;
+  max-width: 1550px;
+  margin: 0 auto;
+}
+
+ul {
+  font-size: 20px;
+  line-height: 24px;
+  list-style: none;
+
+  li {
+    padding-bottom: 16px;
+    padding-right: 16px;
+  }
+}
+thead {
+  margin-bottom: 20px;
+}
+
+th span {
+  cursor: pointer;
+}
+
+.btn {
+  margin-left: 11px;
+  background: linear-gradient(274.9deg, #67ca82 1.22%, #76d890 99.42%);
+  box-shadow: 0 1px 4px rgb(103 202 130 / 16%),
+    0 4px 16px rgb(103 202 130 / 20%);
+  border-radius: 14px;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  width: 100%;
+  max-width: 220px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(274.9deg, #47bd66 1.22%, #45c968 99.42%);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    max-width: 100%;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .show {
+    h3::after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 6px;
+      right: 0;
+      top: 0;
+      background: url("/tick.svg") no-repeat;
+      transform: rotate(180deg);
+    }
+
+    ul {
+      @media (max-width: 768px) {
+        display: block !important;
+      }
+    }
+  }
+}
+
+.visually-hidden {
+  display: none;
+}

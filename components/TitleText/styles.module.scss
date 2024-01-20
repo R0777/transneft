@@ -1,0 +1,40 @@
+@import "/styles/variables.scss";
+
+.titleText {
+  //padding-bottom: 48px;
+  color: #fff;
+  text-align: center;
+  max-width: 750px;
+
+  h1 {
+    font-size: 50px;
+    line-height: 33px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 990px) {
+      line-height: 55px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+  }
+
+  div {
+    width: 50px;
+    height: 2px;
+    background: #036ebb;
+    margin: 24px auto 16px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 16px 0 0;
+    text-align: center;
+  }
+}

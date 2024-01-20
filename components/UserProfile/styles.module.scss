@@ -1,0 +1,59 @@
+.profile {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	margin-top: 20px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+
+	@media screen and (max-width: 990px) {
+		flex-direction: column;
+	}
+
+	&__avatar {
+		margin-right: 20px;
+
+		&_img {
+			width: auto;
+			height: 200px;
+		}
+	}
+
+	&__info {
+		flex: 1;
+	}
+
+	&__job {
+		padding: 5px;
+		font-size: 1rem;
+		resize: none
+	}
+
+	&__name,
+	&__avatar_input {
+		border: 0;
+		border-bottom: 1px solid black;
+		padding: 5px;
+		font-size: 1rem;
+		margin: 20px 0;
+		outline: none;
+	}
+
+	&__job {
+		width: 100%;
+		outline: none;
+	}
+
+	&__name {
+		font-size: 20px;
+	}
+
+	&__name,
+	&__avatar_input {
+		width: 50%;
+
+		@media screen and (max-width: 990px) {
+			width: 100%;
+		}
+	}
+}

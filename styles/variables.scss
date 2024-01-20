@@ -1,0 +1,54 @@
+// COLORS
+$black: #000000;
+$white: #ffffff;
+$accentBlue: #4eabfd;
+$grey100: #f0f3fa;
+$grey200: #d3dde7;
+$grey50: #f4f8fc;
+$grey300: #bac8d5;
+$grey500: #758c9e;
+$grey600: #5e778a;
+$grey800: #304a5c;
+$indigo200: #cfe9ff;
+
+// OLD COLORS - Do we need these?
+$offWhite: #d3dde7;
+$accentBlue: #00a7ee;
+$lightBlue: #3bb6ea;
+$navyBlue: #013d56;
+$navyBlueMedium: #11232e;
+$navyBlueDark: #002e42;
+$navyBlueTitles: #304a5c;
+$greyParagraph: #5e758a;
+$grey400: #92a6b7;
+$grey700: #486175;
+$grey800: #304a5c;
+$accent500: #1fbcff;
+$fade600: #5e778a;
+$fade500: #485f75;
+$fadeGrey: #bac8d5;
+$lightGreyParagraph: #758c9e;
+$blue100: #ebf9ff;
+$blue200: #cfe9ff;
+$blue300: #85daff;
+$yellow: #fcb70b;
+
+// GRADIENTS
+$lightBlueGradient: linear-gradient(294.42deg, #d6f3ff 0%, #ebf9ff 99.14%);
+$greenGradient: linear-gradient(274.9deg, #67ca82 1.22%, #76d890 99.42%);
+$greenGradientHover: linear-gradient(274.9deg, #47bd66 1.22%, #45c968 99.42%);
+
+// TRANSITIONS
+$ease1s: all 0.1s ease;
+$ease2s: all 0.2s ease;
+$ease3s: all 0.3s ease;
+$ease8s: all 0.8s ease;
+
+// BREAKPOINTS
+$full: 1920px;
+$laptop: 1440px;
+$laspot-s: 1199px;
+$tablet-b: 991px;
+$tablet-m: 767px;
+$tablet-s: 575px;
+$mobile: 320px;

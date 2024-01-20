@@ -1,0 +1,56 @@
+@import "/styles/variables.scss";
+
+.heroBlock {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  height: 250px;
+  text-align: center;
+  color: $white;
+  padding: 0 16px;
+
+  a {
+    color: $white;
+  }
+
+  h1 {
+    font-size: 72px;
+    letter-spacing: 5px;
+
+    @media (max-width: 630px) {
+      font-size: 32px;
+      line-height: 50px;
+    }
+  }
+
+  @media (max-width: 630px) {
+    margin: 100px auto;
+  }
+
+  h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    line-height: 30px;
+
+    @media (max-width: 630px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  h2 {
+    font-size: 46px;
+    line-height: 64px;
+    letter-spacing: 2px;
+
+    @media (max-width: 630px) {
+      font-size: 32px;
+      line-height: 50px;
+    }
+  }
+
+  @media (max-width: 630px) {
+    margin: 100px auto;
+  }
+}

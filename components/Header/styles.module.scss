@@ -1,0 +1,201 @@
+@import "/styles/variables.scss";
+
+.outerNav {
+  position: sticky;
+  top: 0;
+  padding: 16px;
+  z-index: 10;
+  background: transparent!important;
+  transition: all 0.7s ease-in-out;
+
+  & .stickyRW {
+    background: linear-gradient(294.42deg, #d6f3ff 0%, #ebf9ff 99.14%);
+    text-align: center;
+
+    & .innerStickyRw {
+      max-width: 1140px;
+      padding: 20px 15px;
+      margin: auto;
+      font-size: 16px;
+      color: $grey800;
+
+      @media (max-width: 991px) {
+        padding: 15px 10px;
+      }
+    }
+  }
+  & .innerNav {
+    display: flex;
+    max-width: 1140px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    margin: 0 auto;
+
+    @media (max-width: 991px) {
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    & .rightSide {
+      display: flex;
+      color: #1A1A1A;;
+      gap: 50px;
+      font-size: 16px;
+      line-height: 24px;
+      transition: $ease3s;
+      border-bottom: 1.5px solid transparent;
+
+      a {
+        color: #005a9c;
+
+        @media (max-width: 991px) {
+          color: #005a9c;
+        }
+      }
+
+      & :hover {
+        color: #DB2E15;
+        transition: $ease3s;
+      }
+
+      & .activeLink {
+        color: #DB2E15;
+      }
+
+      & .navLinks {
+        color: #005a9c;
+
+        &:hover {
+          color: #DB2E15;
+          transition: $ease3s;
+        }
+      }
+
+      @media (max-width: 991px) {
+        width: 100%;
+        background-color: whitesmoke;
+        min-height: 600px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateX(0%);
+        overflow: hidden;
+        padding: 20px 0;
+        z-index: -1;
+        color: #212529;
+        gap: 20px;
+
+        &.mobOpen {
+          transform: translateX(100%);
+        }
+
+        & a {
+          padding: 10px;
+        }
+        & .activeLink {
+          background-color: #d1d1d1;
+          width: 100%;
+          text-align: center;
+          border: none;
+        }
+        & .navLinks:hover {
+          display: flex;
+          background-color: $blue300;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+      @media (max-width: 991px) and (max-height: 600px) {
+        line-height: 15px;
+        justify-content: center;
+        min-height: auto;
+      }
+    }
+
+    & .burgerMenu {
+      position: absolute;
+      display: none;
+      color: #212529;
+      flex-direction: column;
+      //top: 25px;
+      right: 20px;
+      height: 15px;
+      gap: 3px;
+      @media (max-width: 991px) {
+        display: flex;
+      }
+      & span {
+        background-color: #005a9c;
+        width: 23px;
+        height: 3px;
+        display: block;
+        border-radius: 6px;
+        transform: rotate(0);
+        transition: $ease3s;
+        opacity: 1;
+      }
+      &.toggleX span {
+        display: none;
+      }
+    }
+
+    & .closeButton {
+      display: none;
+      position: absolute;
+      bottom: 80px;
+      left: calc(50% - 25px);
+      width: 50px;
+      height: 50px;
+      background-color: #212529;
+      border-radius: 100%;
+
+      @media (max-width: 991px) {
+        display: flex;
+      }
+      @media (max-width: 991px) and (max-height: 600px) {
+        bottom: 50px;
+      }
+      & span:nth-child(1) {
+        background-color: $white;
+        width: 21px;
+        height: 2px;
+        display: block;
+        border-radius: 6px;
+        transform: rotate(45deg);
+        transition: $ease3s;
+        opacity: 1;
+        transform: translateY(0.8px) rotate(225deg);
+        position: absolute;
+        top: 24px;
+        left: 15px;
+      }
+      & span:nth-child(2) {
+        background-color: $white;
+        width: 21px;
+        height: 2px;
+        display: block;
+        border-radius: 6px;
+        transform: rotate(-45deg);
+        transition: $ease3s;
+        opacity: 1;
+        transform: translateY(-3px) rotate(-225deg);
+        position: absolute;
+        top: 27px;
+        left: 14px;
+      }
+    }
+  }
+}
+
+.scrolled {
+  background: white!important;
+  }
