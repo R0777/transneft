@@ -12,10 +12,12 @@
 
 	&__avatar {
 		margin-right: 20px;
+		width: 327px;
 
 		&_img {
-			width: auto;
-			height: 200px;
+			width: 327px;
+			height: auto;
+			object-fit: cover;
 		}
 	}
 
@@ -54,6 +56,22 @@
 
 		@media screen and (max-width: 990px) {
 			width: 100%;
+		}
+	}
+
+	.saveButton {
+		display: flex;
+		outline: none;
+		border: 0;
+		background: #005a9c;
+		color: white;
+		margin-left: auto;
+		padding: 10px 25px;
+		cursor: pointer;
+
+		&:hover {
+			background: #00477a;
+			color: #DB2E15
 		}
 	}
 }

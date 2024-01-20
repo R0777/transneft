@@ -1,13 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState, ChangeEvent } from "react";
+import { useState, useLayoutEffect, ChangeEvent } from "react";
 import styles from "./styles.module.scss"
 
 const UserProfile = () => {
 
-    const [avatar, setAvatar] = useState('');
-  const [userName, setUserName] = useState('');
-  const [userJob, setUserJob] = useState('');
+  const [avatar, setAvatar] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userJob, setUserJob] = useState("");
 
+  const getProfileData = () => {
+    setAvatar(localStorage.getItem("avatar") || "")
+    setUserName(localStorage.getItem("userName") || "")
+    setUserJob(localStorage.getItem("userJob") || "")
+  }
+
+  const handleSaveData = () => {
+    localStorage.setItem('avatar', avatar);
+    localStorage.setItem('userName', userName);
+    localStorage.setItem('userJob', userJob);
+  };
+
+  useLayoutEffect(() => {
+    getProfileData()
+  },[])
 
   const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     setUserName(event.target.value);
@@ -49,6 +64,9 @@ const UserProfile = () => {
           value={avatar}
           onChange={handleImageChange}
         />
+
+        <button onClick={handleSaveData} className={styles.saveButton}>Сохранить</button>
+
       </div>
     </section>
   );
