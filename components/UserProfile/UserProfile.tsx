@@ -13,7 +13,7 @@ const UserProfile = () => {
     setUserName(event.target.value);
   };
 
-  const handleJobChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleJobChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     setUserJob(event.target.value);
   };
 
@@ -35,11 +35,11 @@ const UserProfile = () => {
           onChange={handleNameChange}
         />
         <textarea
-        rows={5}
+          rows={5}
           className={styles.profile__job}
           placeholder="Тут вы можете рассказать о себе и ваших хобби"
           value={userJob}
-          onChange={() => handleJobChange}
+          onChange={handleJobChange}
 
         ></textarea>
         <input
